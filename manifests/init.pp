@@ -38,7 +38,7 @@ class ca_autosign (
 
   ini_setting { 'Puppet CA Autosign':
     ensure  => present,
-    path    => "${confdir}/puppet.conf",
+    path    => "${::pe::puppetmaster::confdir}/puppet.conf",
     section => "master",
     setting => "autosign",
     value   => "${install_dir}/mysql-cert-autosign.rb",
