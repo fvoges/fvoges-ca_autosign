@@ -22,7 +22,7 @@ class ca_autosign (
 
   file { "${install_dir}/mysql-cert-autosign.rb":
     ensure => file,
-    source => "puppet:///${module_name}/mysql-cert-autosign.rb",
+    source => "puppet:///modules/${module_name}/mysql-cert-autosign.rb",
     mode   => '0755',
     owner  => 'pe-puppet',
     group  => 'pe-puppet',
