@@ -1,15 +1,16 @@
 #!/opt/puppet/bin/ruby
 
 require 'etc'
+
+# Everyone needs a $HOME
+ENV['HOME'] = Etc.getpwuid(Process.uid).dir
+
 require 'rubygems'
 require 'yaml'
 require 'mysql2'
 require 'syslog/logger'
 require 'puppet'
 require 'puppet/ssl/certificate_request'
-
-# Everyone needs a $HOME
-ENV['HOME'] = Etc.getpwuid(Process.uid).dir
 
 log = Syslog::Logger.new 'mysql-cert-autosign'
 log.info "Policy-based auto-sign started."

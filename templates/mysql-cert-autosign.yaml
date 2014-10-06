@@ -1,5 +1,0 @@
----
-db_user: "<%= @dbuser %>"
-db_pass: "<%= @dbpass %>"
-db_name: "<%= @dbname %>"
-db_host: "<%= @dbhost %>"
