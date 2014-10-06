@@ -1,7 +1,7 @@
 # Class: mysqlenc
 #
 #
-class cert_autosign (
+class ca_autosign (
   $enable = true,
   $dbuser = 'encrw',
   $dbpass = 'rwsecret',
@@ -35,7 +35,6 @@ class cert_autosign (
     owner   => 'pe-puppet',
     group   => 'pe-puppet',
   }
-
 
   ini_setting { 'Puppet CA Autosign':
     ensure  => present,
